@@ -7,23 +7,28 @@ export default class PersonalInfo extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="input-category">
 
         <h3>Informations personnelles</h3>
 
         <div className="input-group">
-          <label htmlFor="name">Nom :</label>
-          <input type="text" id="name" placeholder="name"></input>
+          <input type="text" id="name" placeholder="Prénom Nom" />
         </div>
 
         <div className="input-group">
-          <label htmlFor="email">Email :</label>
-          <input type="email" id="email" placeholder="youremail@adress.com"></input>
+          <input type="email" id="email" placeholder="adresse@email.com" />
         </div>
       
         <div className="input-group">
-          <label htmlFor="phone">Téléphone :</label>
-          <input type="tel" id="phone" placeholder="+41 33 636 28 89"></input>
+          <input type="tel" id="phone" placeholder="+41 33 636 28 89" />
+        </div>
+
+        <div className="input-group">
+          <input type="text" id="location" placeholder="Genève, GE" />
+        </div>
+
+        <div className="input-group">
+          <textarea id="personalDescription" placeholder="Short description..." />
         </div>
 
       </div>

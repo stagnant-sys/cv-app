@@ -7,7 +7,8 @@ export default class StudiesInfo extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="input-category">
+
         <h3>Etudes</h3>
 
         <div className="input-group">
@@ -24,6 +25,7 @@ export default class StudiesInfo extends React.Component {
           <label htmlFor="studiesDate">Date d'obtention :</label>
           <input type="text" id="studiesDate" placeholder="2023"></input>
         </div>
+        
       </div>
     )
   }

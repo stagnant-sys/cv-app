@@ -1,0 +1,85 @@
+* {
+  font-family: Helvetica, Arial, Helvetica, sans-serif; }
+
+body {
+  margin: 0;
+  height: 100%; }
+
+hr {
+  color: black;
+  width: 100%; }
+
+.app {
+  background-color: lightgrey;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.input-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px; }
+
+.input-category {
+  margin: 15px 0;
+  width: 100%; }
+  .input-category h3 {
+    margin-top: 0; }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0; }
+  .input-group label {
+    font-weight: 700;
+    font-size: 1.1rem; }
+  .input-group input, .input-group textarea {
+    padding: 6px;
+    font-size: 1.1rem; }
+    .input-group input::placeholder, .input-group textarea::placeholder {
+      color: lightgrey; }
+
+input[type="submit"] {
+  width: 200px;
+  background-color: grey;
+  color: white;
+  padding: 16px;
+  border-radius: 5px; }
+  input[type="submit"]:hover {
+    background-color: lightgrey;
+    color: black; }
+  input[type="submit"]:active {
+    background-color: black;
+    color: white; }
+
+.display-section {
+  width: 50%;
+  border: 1px solid black;
+  margin: 32px;
+  padding: 32px; }
+
+.display-group {
+  width: 100%; }
+
+.display_personal-info {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "name phone" "name email" "current location"; }
+  .display_personal-info .pi-name {
+    grid-area: name;
+    font-size: 2rem; }
+  .display_personal-info .pi-current-pos {
+    grid-area: current; }
+  .display_personal-info .pi-phone {
+    grid-area: phone; }
+  .display_personal-info .pi-email {
+    grid-area: email; }
+  .display_personal-info .pi-location {
+    grid-area: location; }
+
+/*# sourceMappingURL=App.css.map */

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import InputSection from './components/InputSection';
+import DisplaySection from './components/DisplaySection';
 
 export default class App extends Component {
   constructor (props) {
@@ -9,8 +10,9 @@ export default class App extends Component {
 
   render () {
     return (
-      <div>
+      <div className="app">
         <InputSection />
+        <DisplaySection />
       </div>
     );
   }

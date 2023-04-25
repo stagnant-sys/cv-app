@@ -7,7 +7,7 @@ export default class WorkInfo extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="input-category">
 
         <h3>Expérience professionnelle</h3>
 
