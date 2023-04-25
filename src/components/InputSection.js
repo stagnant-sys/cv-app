@@ -8,6 +8,10 @@ export default class InputSection extends React.Component {
     super (props);
   }
 
+  onSubmit () {
+    console.log('hello');
+  }
+
   render () {
     return (
       <div className="input-section">
@@ -16,7 +20,7 @@ export default class InputSection extends React.Component {
         <StudiesInfo />
         <hr/>
         <WorkInfo />
-        <input type="submit" value="Créer le CV"></input>
+        <input type="submit" value="Créer le CV" onClick={this.onSubmit}></input>
       </div>
     )
   }

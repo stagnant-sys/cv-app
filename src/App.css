@@ -60,7 +60,7 @@ input[type="submit"] {
   width: 50%;
   border: 1px solid black;
   margin: 32px;
-  padding: 32px; }
+  padding: 50px; }
 
 .display-group {
   width: 100%; }
@@ -81,5 +81,26 @@ input[type="submit"] {
     grid-area: email; }
   .display_personal-info .pi-location {
     grid-area: location; }
+
+.display_si-group {
+  display: flex;
+  justify-content: space-between; }
+  .display_si-group .school {
+    font-weight: 700; }
+
+.display_wi-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "job place" "tasks tasks"; }
+  .display_wi-group .wi-job {
+    grid-area: job; }
+  .display_wi-group .wi-place {
+    grid-area: place;
+    justify-self: end; }
+  .display_wi-group .wi-tasks {
+    grid-area: tasks; }
+  .display_wi-group .place {
+    font-weight: 700; }
 
 /*# sourceMappingURL=App.css.map */

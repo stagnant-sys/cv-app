@@ -82,7 +82,7 @@ input[type="submit"] {
   width: 50%;
   border: 1px solid black;
   margin: 32px;
-  padding: 32px;
+  padding: 50px;
 }
 
 .display-group {
@@ -116,5 +116,39 @@ input[type="submit"] {
 
   .pi-location {
     grid-area: location;
+  }
+}
+
+.display_si-group {
+  display: flex;
+  justify-content: space-between;
+
+  .school {
+    font-weight: 700;
+  }
+}
+
+.display_wi-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:  "job place"
+                        "tasks tasks";
+  
+  .wi-job {
+    grid-area: job;
+  }
+
+  .wi-place {
+    grid-area: place;
+    justify-self: end;
+  }
+
+  .wi-tasks {
+    grid-area: tasks;
+  }
+
+  .place {
+    font-weight: 700;
   }
 }
