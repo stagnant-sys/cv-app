@@ -3,47 +3,30 @@ import React from "react";
 export default class DisplaySection extends React.Component {
   constructor (props) {
     super (props);
-    this.state = {
-        personalInfo: {
-          name: "Georges Moustillon",
-          tel: "+41 33 636 28 89",
-          email: "moustillon_georges@gmail.com",
-          location: "Genève, GE",
-        }
-      };
   }
 
   render () {
-    const { personalInfo } = this.state;
-
     return (
       <div className="display-section">
         
         <div className="display-group display_personal-info">
-          <div className="pi-name">{personalInfo.name}</div>
-          <div className="pi-current-pos">Current Pos</div>
-          <div className="contact pi-phone">{personalInfo.tel}</div>
-          <div className="contact pi-email">{personalInfo.email}</div>
-          <div className="contact pi-location">{personalInfo.location}</div>
+          <div className="pi-name">{this.props.username}</div>
+          <div className="pi-current-pos">{this.props.wanted}</div>
+          <div className="contact pi-phone">{this.props.phone}</div>
+          <div className="contact pi-email">{this.props.email}</div>
+          <div className="contact pi-location">{this.props.location}</div>
         </div>
 
         <hr />
 
-        <div className="display-group description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        <div className="display-group description">{this.props.description}</div>
 
         <div className="display-group display_studies-info">
           <h3 className="display_section-title">Etudes</h3>
 
           <div className="display_si-group">
-            <div className="si-studies">Communication et management</div>
-            <div className="si-school"><span className="school">Ecole du rire</span> | <span className="si-dates">2023</span></div>
-          </div>
-
-          <div className="display_si-group">
-            <div className="si-studies">Communication et management</div>
-            <div className="si-school"><span className="school">Ecole du rire</span> | <span className="si-dates">2023</span></div>
+            <div className="si-studies">{this.props.studies}</div>
+            <div className="si-school"><span className="school">{this.props.school}</span> | <span className="si-dates">{this.props.studiesDate}</span></div>
           </div>
         </div>
 
@@ -51,25 +34,13 @@ export default class DisplaySection extends React.Component {
           <h3 className="display_section-title">Expérience professionnelle</h3>
 
           <div className="display_wi-group">
-            <div className="wi-job">Assistant machine à café</div>
-            <div className="wi-place"><span className="place">Rolex</span> | <span className="wi-dates">2022 - 2023</span></div>
+            <div className="wi-job">{this.props.position}</div>
+            <div className="wi-place"><span className="place">{this.props.company}</span> | <span className="wi-dates">{this.props.workDates}</span></div>
             <div className="wi-tasks">
               <ul>
-                <li>Faire les cafés</li>
-                <li>Nettoyer la machine à café</li>
-                <li>Remplir la machine à café</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="display_wi-group">
-            <div className="wi-job">Assistant machine à café</div>
-            <div className="wi-place"><span className="place">Rolex</span> | <span className="wi-dates">2022 - 2023</span></div>
-            <div className="wi-tasks">
-              <ul>
-                <li>Faire les cafés</li>
-                <li>Nettoyer la machine à café</li>
-                <li>Remplir la machine à café</li>
+                <li>{this.props.task1}</li>
+                <li>{this.props.task2}</li>
+                <li>{this.props.task3}</li>
               </ul>
             </div>
           </div>
