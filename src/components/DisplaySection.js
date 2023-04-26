@@ -26,8 +26,8 @@ export default class DisplaySection extends React.Component {
 
           <div className="display_si-group">
             <div className="si-studies">{this.props.studies}</div>
-            <div className="si-school"><span className="school">{this.props.school}</span> | <span className="si-dates">{this.props.studiesDate}</span></div>
-          </div>
+            <div className="si-school"><span className="school">{this.props.school}</span> <span className="si-dates">{"|" + this.props.studiesDate}</span></div>
+          </div> 
         </div>
 
         <div className="display-group display_work-info">

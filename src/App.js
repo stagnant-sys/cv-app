@@ -48,6 +48,9 @@ export default class App extends Component {
           studies: formData.studies,
           school: formData.school,
           date: formData.studiesDate,
+          studies2: formData.studies2,
+          school2: formData.school2,
+          date2: formData.studiesDate2,
         },
         workInfo: {
           company: formData.company,

@@ -3,13 +3,6 @@ import React from "react";
 export default class InputSection extends React.Component {
   constructor (props) {
     super (props);
-    this.state = {
-      studiesGroup: {
-        studies: "",
-        school: "",
-        date: ""
-      }
-    };
   }
 
   sendFormData (e) {
@@ -51,8 +44,6 @@ export default class InputSection extends React.Component {
 
         <fieldset>
           <legend>Etudes</legend>
-          <button type="button" className="add-studies">+</button>
-
           <div className="input-group">
             <input type="text" name="school" placeholder="Lieu de formation"></input>
           </div>
@@ -62,7 +53,7 @@ export default class InputSection extends React.Component {
           <div className="input-group">
             <input type="text" name="studiesDate" placeholder="Date d'obtention du diplôme"></input>
           </div>
-          </fieldset>      
+        </fieldset>      
 
        
         <fieldset>
