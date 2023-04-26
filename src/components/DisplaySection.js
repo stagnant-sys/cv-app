@@ -7,7 +7,7 @@ export default class DisplaySection extends React.Component {
 
   render () {
     return (
-      <div className="display-section">
+      <div className="display-section" id="printableArea">
         
         <div className="display-group display_personal-info">
           <div className="pi-name">{this.props.username}</div>
