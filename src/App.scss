@@ -30,6 +30,12 @@ hr {
 
 form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  margin: 24px 0;
 }
 
 .input-category {
@@ -63,6 +69,13 @@ form {
   }
 }
 
+.input-buttons {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
 input[type="submit"] {
   width: 200px;
   background-color: grey;
@@ -81,6 +94,28 @@ input[type="submit"] {
   }
 }
 
+input[type="reset"] {
+  width: 150px;
+  background-color: grey;
+  color: white;
+  padding: 16px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: lightgrey;
+    color: black;
+  }
+
+  &:active {
+    background-color: black;
+    color: white;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
 // DISPLAY
 
 .display-section {
@@ -92,6 +127,10 @@ input[type="submit"] {
 
 .display-group {
   width: 100%;
+}
+
+.display_section-title {
+  letter-spacing: 1px;
 }
 
 .display_personal-info {
@@ -142,6 +181,7 @@ input[type="submit"] {
   
   .wi-job {
     grid-area: job;
+    font-weight: 700;
   }
 
   .wi-place {
@@ -151,6 +191,15 @@ input[type="submit"] {
 
   .wi-tasks {
     grid-area: tasks;
+
+    ul {
+      padding: 0;
+      margin: 6px 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
   }
 
   .place {

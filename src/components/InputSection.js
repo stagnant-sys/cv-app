@@ -3,6 +3,13 @@ import React from "react";
 export default class InputSection extends React.Component {
   constructor (props) {
     super (props);
+    this.state = {
+      studiesGroup: {
+        studies: "",
+        school: "",
+        date: ""
+      }
+    };
   }
 
   sendFormData (e) {
@@ -13,13 +20,14 @@ export default class InputSection extends React.Component {
     this.props.callbackFromParent(formJson);
   }
 
+
   render () {
     return (
       <div className="input-section">
 
       <form method="post" onSubmit={this.sendFormData.bind(this)}>
-        <div className="input-category">
-          <h3>Informations personnelles</h3>
+        <fieldset>
+          <legend>Informations Personnelles</legend>
           <div className="input-group">
             <input type="text" name="name" placeholder="Prénom Nom" />
           </div>
@@ -38,12 +46,13 @@ export default class InputSection extends React.Component {
           <div className="input-group">
             <input type="text" name="wantedJob" placeholder="Poste recherché"></input>
           </div>
-        </div>
+        </fieldset>
 
-        <hr/>
 
-        <div className="input-category">
-          <h3>Etudes</h3>
+        <fieldset>
+          <legend>Etudes</legend>
+          <button type="button" className="add-studies">+</button>
+
           <div className="input-group">
             <input type="text" name="school" placeholder="Lieu de formation"></input>
           </div>
@@ -53,12 +62,11 @@ export default class InputSection extends React.Component {
           <div className="input-group">
             <input type="text" name="studiesDate" placeholder="Date d'obtention du diplôme"></input>
           </div>
-        </div>        
+          </fieldset>      
 
-        <hr/>
-
-        <div className="input-category">
-          <h3>Expérience professionnelle</h3>
+       
+        <fieldset>
+          <legend>Expérience professionnelle</legend>
           <div className="input-group">
             <input type="text" name="company" placeholder="Employeur"></input>
           </div>
@@ -73,9 +81,13 @@ export default class InputSection extends React.Component {
           <div className="input-group">
             <input type="text" name="workDates" placeholder="Période d'engagement"></input>
           </div>
+        </fieldset>
+          
+        <div className="input-buttons">        
+          <input type="submit" value="Créer le CV"></input>
+          <input type="reset" value="Recommencer"></input>
         </div>
 
-        <input type="submit" value="Créer le CV"></input>
       </form>
 
       </div>

@@ -22,7 +22,7 @@ export default class DisplaySection extends React.Component {
         <div className="display-group description">{this.props.description}</div>
 
         <div className="display-group display_studies-info">
-          <h3 className="display_section-title">Etudes</h3>
+          <h3 className="display_section-title">ÉTUDES</h3>
 
           <div className="display_si-group">
             <div className="si-studies">{this.props.studies}</div>
@@ -31,7 +31,7 @@ export default class DisplaySection extends React.Component {
         </div>
 
         <div className="display-group display_work-info">
-          <h3 className="display_section-title">Expérience professionnelle</h3>
+          <h3 className="display_section-title">EXPÉRIENCE PROFESSIONNELLE</h3>
 
           <div className="display_wi-group">
             <div className="wi-job">{this.props.position}</div>

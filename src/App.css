@@ -24,7 +24,12 @@ hr {
   margin: 32px; }
 
 form {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+fieldset {
+  margin: 24px 0; }
 
 .input-category {
   margin: 15px 0;
@@ -47,6 +52,12 @@ form {
     .input-group input::placeholder, .input-group textarea::placeholder {
       color: lightgrey; }
 
+.input-buttons {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  gap: 32px; }
+
 input[type="submit"] {
   width: 200px;
   background-color: grey;
@@ -60,6 +71,22 @@ input[type="submit"] {
     background-color: black;
     color: white; }
 
+input[type="reset"] {
+  width: 150px;
+  background-color: grey;
+  color: white;
+  padding: 16px;
+  border-radius: 5px; }
+  input[type="reset"]:hover {
+    background-color: lightgrey;
+    color: black; }
+  input[type="reset"]:active {
+    background-color: black;
+    color: white; }
+
+textarea {
+  resize: vertical; }
+
 .display-section {
   width: 50%;
   border: 1px solid black;
@@ -68,6 +95,9 @@ input[type="submit"] {
 
 .display-group {
   width: 100%; }
+
+.display_section-title {
+  letter-spacing: 1px; }
 
 .display_personal-info {
   display: grid;
@@ -98,12 +128,18 @@ input[type="submit"] {
   grid-template-rows: 1fr 3fr;
   grid-template-areas: "job place" "tasks tasks"; }
   .display_wi-group .wi-job {
-    grid-area: job; }
+    grid-area: job;
+    font-weight: 700; }
   .display_wi-group .wi-place {
     grid-area: place;
     justify-self: end; }
   .display_wi-group .wi-tasks {
     grid-area: tasks; }
+    .display_wi-group .wi-tasks ul {
+      padding: 0;
+      margin: 6px 0; }
+    .display_wi-group .wi-tasks li {
+      list-style-type: none; }
   .display_wi-group .place {
     font-weight: 700; }
 

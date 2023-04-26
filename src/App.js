@@ -8,24 +8,26 @@ export default class App extends Component {
     super (props);
     this.state = {
       personalInfo: {
-        name: "",
-        phone: "",
-        email: "",
-        location: "",
+        name: "Alex Emple",
+        phone: "+41 33 636 2889",
+        email: "alexemple@fakemail.ch",
+        location: "Genève, GE",
+        wanted: "Développeur web",
+        description: "Après avoir pu développer mes compétences en développement dans une grande entreprise multinationale, je cherche à présent à mettre mes compétences au service du bien public."
       },
       studiesInfo: {
-        studies: "",
-        school: "",
-        studiesDate: "",
+        studies: "Sciences Informatiques",
+        school: "Université de Genève",
+        date: "2018",
       },
       workInfo: {
-        company: "",
-        job: "",
-        workDates: "",
+        company: "Fakebook",
+        position: "Développeur fullstack",
+        dates: "2019 - 2022",
         tasks: {
-          task1: "",
-          task2: "",
-          task3: "",
+          task1: "Création de l'interface utilisateur",
+          task2: "Optimisation du référencement",
+          task3: "Migration de la base de données",
         }
       }
     };
